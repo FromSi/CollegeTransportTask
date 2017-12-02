@@ -18,10 +18,12 @@ public class Begin extends AppCompatActivity {
         setContentView(R.layout.activity_begin);
         np = findViewById(R.id.np);
         np2 = findViewById(R.id.np2);
-        b1 = findViewById(R.id.btn);
+        b1 = findViewById(R.id.btn1);
 
         np.setMaxValue(10);
+        np.setMinValue(2);
         np2.setMaxValue(10);
+        np2.setMinValue(2);
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
