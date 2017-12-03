@@ -12,7 +12,6 @@ public class ScreenSlidePagerAdapter extends FragmentStatePagerAdapter {
     public ScreenSlidePagerAdapter(FragmentManager fm) {
         super(fm);
     }
-
     @Override
     public Fragment getItem(int position) {
         switch (position){
@@ -24,7 +23,6 @@ public class ScreenSlidePagerAdapter extends FragmentStatePagerAdapter {
                 return null;
         }
     }
-
     @Override
     public int getCount() {
         return 2;

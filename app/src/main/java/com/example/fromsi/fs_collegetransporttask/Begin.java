@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.NumberPicker;
-import android.widget.Toast;
 
 public class Begin extends AppCompatActivity {
     private NumberPicker np,np2;
@@ -20,9 +19,9 @@ public class Begin extends AppCompatActivity {
         np2 = findViewById(R.id.np2);
         b1 = findViewById(R.id.btn1);
 
-        np.setMaxValue(10);
+        np.setMaxValue(9);
         np.setMinValue(2);
-        np2.setMaxValue(10);
+        np2.setMaxValue(9);
         np2.setMinValue(2);
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
