@@ -1,4 +1,4 @@
-package com.example.fromsi.fs_collegetransporttask;
+package com.example.fromsi.fs_collegetransporttask.kz.kcollege;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.NumberPicker;
+
+import com.example.fromsi.fs_collegetransporttask.R;
 
 public class Begin extends AppCompatActivity {
     private NumberPicker np,np2;

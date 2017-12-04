@@ -1,4 +1,4 @@
-package com.example.fromsi.fs_collegetransporttask;
+package com.example.fromsi.fs_collegetransporttask.kz.kcollege.fill;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -12,6 +12,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+
+import com.example.fromsi.fs_collegetransporttask.R;
 
 import java.util.ArrayList;
 
@@ -66,5 +68,8 @@ public class Fill1 extends Fragment implements View.OnClickListener {
         }
         ViewPager viewPager = getActivity().findViewById(R.id.vp);
         viewPager.setCurrentItem(1);
+    }
+    public void cllllllll(){
+
     }
 }

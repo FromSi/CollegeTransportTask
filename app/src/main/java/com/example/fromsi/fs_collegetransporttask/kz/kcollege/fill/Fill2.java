@@ -1,5 +1,6 @@
-package com.example.fromsi.fs_collegetransporttask;
+package com.example.fromsi.fs_collegetransporttask.kz.kcollege.fill;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -8,15 +9,20 @@ import android.text.InputType;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.Toast;
+
+import com.example.fromsi.fs_collegetransporttask.R;
 
 import java.util.ArrayList;
-public class Fill2 extends Fragment {
+public class Fill2 extends Fragment implements View.OnClickListener {
     private int index1, index2;
     private ArrayList<EditText> editTexts1;
     private LinearLayout.LayoutParams params;
     private LinearLayout ll;
+    private Button button;
 
     @Nullable
     @Override
@@ -27,7 +33,8 @@ public class Fill2 extends Fragment {
         ll = root.findViewById(R.id.llmain);
         editTexts1 = new ArrayList<>();
         params = new LinearLayout.LayoutParams(scale, LinearLayout.LayoutParams.MATCH_PARENT);
-
+        button = root.findViewById(R.id.start);
+        button.setOnClickListener(this);
         for (int i = 0; i < getActivity().getIntent().getIntExtra("np2", 2); i++) {
             index1++;
             index2 = 0;
@@ -50,5 +57,11 @@ public class Fill2 extends Fragment {
             ll.addView(linearLayout);
         }
         return root;
+    }
+
+    @Override
+    public void onClick(View view) {
+//        Intent intent = new Intent(getContext(), Finale.class);
+//        startActivity(intent);
     }
 }
