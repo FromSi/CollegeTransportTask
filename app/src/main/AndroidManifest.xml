@@ -17,6 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".kz.kcollege.Fill" />
+        <activity android:name=".kz.kcollege.Finale" />
     </application>
 
 </manifest>

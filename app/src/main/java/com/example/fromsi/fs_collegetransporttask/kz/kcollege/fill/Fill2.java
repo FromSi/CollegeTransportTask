@@ -12,9 +12,9 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
-import android.widget.Toast;
 
 import com.example.fromsi.fs_collegetransporttask.R;
+import com.example.fromsi.fs_collegetransporttask.kz.kcollege.Finale;
 
 import java.util.ArrayList;
 public class Fill2 extends Fragment implements View.OnClickListener {
@@ -61,7 +61,10 @@ public class Fill2 extends Fragment implements View.OnClickListener {
 
     @Override
     public void onClick(View view) {
-//        Intent intent = new Intent(getContext(), Finale.class);
-//        startActivity(intent);
+        int n1 = getActivity().getIntent().getIntExtra("np", 2);
+        int n2 = getActivity().getIntent().getIntExtra("np2", 2);
+        Intent intent = new Intent(getActivity(), Finale.class);
+        intent.putExtra("formula", n1+"+"+n2+"-"+1+"="+(n1+n2-1) );
+        startActivity(intent);
     }
 }
