@@ -30,4 +30,5 @@ public class ScreenSlidePagerAdapter extends FragmentStatePagerAdapter {
     public int getCount() {
         return 2;
     }
+    public void ononon(){}
 }

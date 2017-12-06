@@ -1,6 +1,8 @@
 package com.example.fromsi.fs_collegetransporttask.kz.kcollege.fill;
 
+import android.content.Context;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
@@ -14,6 +16,7 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 
 import com.example.fromsi.fs_collegetransporttask.R;
+import com.example.fromsi.fs_collegetransporttask.kz.kcollege.OnDataPass;
 
 import java.util.ArrayList;
 
@@ -22,7 +25,7 @@ public class Fill1 extends Fragment implements View.OnClickListener {
     private ViewGroup root;
     private LinearLayout ln1, ln2;
     private Button button;
-
+    private OnDataPass mDataPasser;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -60,6 +63,7 @@ public class Fill1 extends Fragment implements View.OnClickListener {
 
     @Override
     public void onClick(View view) {
+        mDataPasser.onDataPass1(editTexts1,editTexts2);
         for (int i = 0; i < getActivity().getIntent().getIntExtra("np", 2); i++) {
             if (editTexts1.get(i).getText().toString().isEmpty()) return;
         }
@@ -69,7 +73,10 @@ public class Fill1 extends Fragment implements View.OnClickListener {
         ViewPager viewPager = getActivity().findViewById(R.id.vp);
         viewPager.setCurrentItem(1);
     }
-    public void cllllllll(){
 
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        mDataPasser = (OnDataPass) context;
     }
 }
