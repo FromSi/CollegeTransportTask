@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,6 +29,7 @@ public class Finale1 extends Fragment implements View.OnClickListener {
     private ViewGroup root;
     private int summ1, summ2;
     private int[] editTexts1, editTexts2;
+    private int[][] arrayOt;
 
     @Nullable
     @Override
@@ -41,6 +43,13 @@ public class Finale1 extends Fragment implements View.OnClickListener {
         optimal.setOnClickListener(this);
         editTexts1 = getActivity().getIntent().getIntArrayExtra("editTexts1");
         editTexts2 = getActivity().getIntent().getIntArrayExtra("editTexts2");
+
+        arrayOt = new int[editTexts1.length][editTexts2.length];
+        for (int i = 0; i < editTexts1.length; i++) {
+            arrayOt[i] = getActivity().getIntent().getIntArrayExtra("arryaOt" + i);
+        }
+
+//        arrayOt = getActivity().getIntent().getIntArrayExtra("arryaOt");
         summ1 = 0;
         summ2 = 0;
         for (int i = 0; i < editTexts1.length; i++) {
@@ -51,6 +60,9 @@ public class Finale1 extends Fragment implements View.OnClickListener {
         }
         if (summ1 != summ2) checkF(summ1, summ2);
         textformula.setText(getActivity().getIntent().getStringExtra("formula"));
+
+        start();
+
 
         return root;
     }
@@ -66,6 +78,31 @@ public class Finale1 extends Fragment implements View.OnClickListener {
             textost1.setText(String.valueOf(a - b));
         } else if (a < b) {
             textost2.setText(String.valueOf(b - a));
+        }
+    }
+
+    public void start() {
+        for (int i = 1; i <= 9; i++) {
+            for (int j = 0; j < editTexts1.length; j++) {
+                for (int k = 0; k < editTexts2.length; k++) {
+                    if (arrayOt[k][j] == i)
+                        if (editTexts1[j] > 0 && editTexts2[k] > 0) {
+                            if (editTexts1[j] > editTexts2[k]) {
+                                Log.d("MyLog", "C" + (j + 1) + (k + 1) + " " + (editTexts2[k]));
+                                editTexts1[j] -= editTexts2[k];
+                                editTexts2[k] = 0;
+                            } else if (editTexts2[k] > editTexts1[j]) {
+                                Log.d("MyLog", "C" + (j + 1) + (k + 1) + " " + (editTexts1[j]));
+                                editTexts2[k] -= editTexts1[j];
+                                editTexts1[j] = 0;
+                            } else if (editTexts1[j] == editTexts2[k]){
+                                Log.d("MyLog", "C" + (j + 1) + (k + 1) + " " + (editTexts1[j]));
+                                editTexts2[k] = 0;
+                                editTexts1[j] = 0;
+                            }
+                        }
+                }
+            }
         }
     }
 }

@@ -53,10 +53,10 @@ public class Fill2 extends Fragment implements View.OnClickListener {
                 editText = new EditText(getActivity());
                 editText.setInputType(InputType.TYPE_CLASS_NUMBER);
                 editText.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
-                editText.setFilters(new InputFilter[]{new InputFilter.LengthFilter(3)});
+                editText.setFilters(new InputFilter[]{new InputFilter.LengthFilter(1)});
                 editText.setTextSize(getActivity().getResources().getDimension(R.dimen.textsize));
                 index2++;
-                editText.setHint("C" + index1 + "" + index2);
+                editText.setHint("C" + index2 + index1);
                 editTexts1.add(editText);
                 linearLayout.addView(editTexts1.get(j));
             }
