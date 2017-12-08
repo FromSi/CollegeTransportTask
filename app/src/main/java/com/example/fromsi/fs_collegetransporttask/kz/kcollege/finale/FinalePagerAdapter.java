@@ -24,7 +24,6 @@ public class FinalePagerAdapter extends FragmentStatePagerAdapter {
                 return null;
         }
     }
-    public void ooooo(){}
     @Override
     public int getCount() {
         return 2;

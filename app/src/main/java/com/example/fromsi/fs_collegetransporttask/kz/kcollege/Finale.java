@@ -11,9 +11,6 @@ import android.view.View;
 import com.example.fromsi.fs_collegetransporttask.R;
 import com.example.fromsi.fs_collegetransporttask.kz.kcollege.finale.FinalePagerAdapter;
 
-/**
- * Created by fromsi on 04.12.17.
- */
 
 public class Finale extends FragmentActivity {
     private ViewPager viewPager;

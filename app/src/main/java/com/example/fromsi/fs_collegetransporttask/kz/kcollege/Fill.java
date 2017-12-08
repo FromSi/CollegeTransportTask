@@ -51,7 +51,7 @@ public class Fill extends FragmentActivity implements OnDataPass {
 
     @Override
     public void onDataPass2(String formula, int[][] arryaOt) {
-        Intent intent = new Intent(getBaseContext(), Finale.class);
+        Intent intent = new Intent(this, Finale.class);
 
         for (int i = 0; i < editTexts1.length; i++) {
                 intent.putExtra("arryaOt"+i, arryaOt[i]);
