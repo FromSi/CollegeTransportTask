@@ -16,7 +16,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/shop"
+        android:src="@drawable/storage"
         tools:ignore="ContentDescription" />
 
     <ImageView
@@ -29,7 +29,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/storage"
+        android:src="@drawable/shop"
         tools:ignore="ContentDescription" />
 
     <Button

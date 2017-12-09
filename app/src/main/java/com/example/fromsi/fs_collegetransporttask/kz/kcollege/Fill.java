@@ -5,14 +5,11 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.EditText;
 
 import com.example.fromsi.fs_collegetransporttask.R;
-import com.example.fromsi.fs_collegetransporttask.kz.kcollege.Finale;
-import com.example.fromsi.fs_collegetransporttask.kz.kcollege.OnDataPass;
 import com.example.fromsi.fs_collegetransporttask.kz.kcollege.fill.ScreenSlidePagerAdapter;
 
 import java.util.ArrayList;
@@ -50,17 +47,17 @@ public class Fill extends FragmentActivity implements OnDataPass {
     }
 
     @Override
-    public void onDataPass2(String formula, int[][] arryaOt) {
-        Intent intent = new Intent(this, Finale.class);
+    public void onDataPass2(String formula, int[][] arryaOt, int intB) {
+        Intent intent = new Intent(this, Fin.class);
 
         for (int i = 0; i < editTexts1.length; i++) {
                 intent.putExtra("arryaOt"+i, arryaOt[i]);
         }
 
         intent.putExtra("formula", formula);
-//        intent.putExtra("arryaOt", arryaOt);
-        intent.putExtra("np", arryaOt);
-        intent.putExtra("np2", arryaOt);
+        intent.putExtra("intB", intB);
+//        intent.putExtra("np", arryaOt);
+//        intent.putExtra("np2", arryaOt);
         intent.putExtra("editTexts1", editTexts1);
         intent.putExtra("editTexts2", editTexts2);
         startActivity(intent);

@@ -16,7 +16,6 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 
 import com.example.fromsi.fs_collegetransporttask.R;
-import com.example.fromsi.fs_collegetransporttask.kz.kcollege.Finale;
 import com.example.fromsi.fs_collegetransporttask.kz.kcollege.OnDataPass;
 
 import java.util.ArrayList;
@@ -76,7 +75,7 @@ public class Fill2 extends Fragment implements View.OnClickListener {
                 index++;
             }
         }
-        mDataPasser.onDataPass2(n1 + "+" + n2 + "-" + 1 + "=" + (n1 + n2 - 1),arryaOt);
+        mDataPasser.onDataPass2(n1 + "+" + n2 + "-" + 1 + "=" + (n1 + n2 - 1),arryaOt,n1 + n2 - 1);
     }
 
     @Override
