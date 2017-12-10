@@ -29,6 +29,7 @@ public class Fill2 extends Fragment implements View.OnClickListener {
     private Button button;
     private ViewGroup root;
     private OnDataPass mDataPasser;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -66,16 +67,35 @@ public class Fill2 extends Fragment implements View.OnClickListener {
 
     @Override
     public void onClick(View view) {
+        int[][] arryaOt;
         int n1 = getActivity().getIntent().getIntExtra("np", 2);
         int n2 = getActivity().getIntent().getIntExtra("np2", 2);
-        int[][] arryaOt = new int[n1][n2];
-        for (int i = 0; i < n1; i++) {
-            for (int j = 0; j < n2; j++) {
-                arryaOt[i][j] = Integer.parseInt(editTexts1.get(index).getText().toString());
-                index++;
+        if (n1 == n2) {
+            arryaOt = new int[n1][n2];
+            for (int i = 0; i < n1; i++) {
+                for (int j = 0; j < n2; j++) {
+                    arryaOt[i][j] = Integer.parseInt(editTexts1.get(index).getText().toString());
+                    index++;
+                }
+            }
+        } else if (n1 > n2) {
+            arryaOt = new int[n2][n1];
+            for (int i = 0; i < n2; i++) {
+                for (int j = 0; j < n1; j++) {
+                    arryaOt[i][j] = Integer.parseInt(editTexts1.get(index).getText().toString());
+                    index++;
+                }
+            }
+        } else {
+            arryaOt = new int[n2][n1];
+            for (int i = 0; i < n2; i++) {
+                for (int j = 0; j < n1; j++) {
+                    arryaOt[i][j] = Integer.parseInt(editTexts1.get(index).getText().toString());
+                    index++;
+                }
             }
         }
-        mDataPasser.onDataPass2(n1 + "+" + n2 + "-" + 1 + "=" + (n1 + n2 - 1),arryaOt,n1 + n2 - 1);
+        mDataPasser.onDataPass2(n1 + "+" + n2 + "-" + 1 + "=" + (n1 + n2 - 1), arryaOt, n1 + n2 - 1);
     }
 
     @Override

@@ -50,16 +50,27 @@ public class Fill extends FragmentActivity implements OnDataPass {
     public void onDataPass2(String formula, int[][] arryaOt, int intB) {
         Intent intent = new Intent(this, Fin.class);
 
-        for (int i = 0; i < editTexts1.length; i++) {
-                intent.putExtra("arryaOt"+i, arryaOt[i]);
+        if (editTexts1 == editTexts2) {
+            for (int i = 0; i < editTexts1.length; i++) {
+                intent.putExtra("arryaOt" + i, arryaOt[i]);
+            }
+            intent.putExtra("editTexts1", editTexts1);
+            intent.putExtra("editTexts2", editTexts2);
+        } else {
+            for (int i = 0; i < editTexts2.length; i++) {
+                intent.putExtra("arryaOt" + i, arryaOt[i]);
+            }
+            intent.putExtra("editTexts1", editTexts2);
+            intent.putExtra("editTexts2", editTexts1);
         }
+
+
 
         intent.putExtra("formula", formula);
         intent.putExtra("intB", intB);
 //        intent.putExtra("np", arryaOt);
 //        intent.putExtra("np2", arryaOt);
-        intent.putExtra("editTexts1", editTexts1);
-        intent.putExtra("editTexts2", editTexts2);
+
         startActivity(intent);
     }
 }
