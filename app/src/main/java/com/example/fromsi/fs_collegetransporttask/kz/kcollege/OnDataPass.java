@@ -10,5 +10,5 @@ import java.util.ArrayList;
 
 public interface OnDataPass {
     public void onDataPass1(ArrayList<EditText> editTexts1, ArrayList<EditText> editTexts2);
-    public void onDataPass2(String formula, int[][] arryaOt, int intB);
+    public void onDataPass2(int[][] arryaOt, int intB);
 }

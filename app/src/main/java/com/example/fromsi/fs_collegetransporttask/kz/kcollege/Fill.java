@@ -47,7 +47,7 @@ public class Fill extends FragmentActivity implements OnDataPass {
     }
 
     @Override
-    public void onDataPass2(String formula, int[][] arryaOt, int intB) {
+    public void onDataPass2(int[][] arryaOt, int intB) {
         Intent intent = new Intent(this, Fin.class);
 
         if (editTexts1 == editTexts2) {
@@ -66,7 +66,6 @@ public class Fill extends FragmentActivity implements OnDataPass {
 
 
 
-        intent.putExtra("formula", formula);
         intent.putExtra("intB", intB);
 //        intent.putExtra("np", arryaOt);
 //        intent.putExtra("np2", arryaOt);

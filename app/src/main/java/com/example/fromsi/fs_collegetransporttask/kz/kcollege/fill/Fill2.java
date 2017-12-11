@@ -95,7 +95,7 @@ public class Fill2 extends Fragment implements View.OnClickListener {
                 }
             }
         }
-        mDataPasser.onDataPass2(n1 + "+" + n2 + "-" + 1 + "=" + (n1 + n2 - 1), arryaOt, n1 + n2 - 1);
+        mDataPasser.onDataPass2(arryaOt, n1 + n2 - 1);
     }
 
     @Override

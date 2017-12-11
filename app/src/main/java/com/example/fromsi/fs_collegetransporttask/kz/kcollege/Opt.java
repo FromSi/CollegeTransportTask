@@ -15,6 +15,7 @@ public class Opt extends AppCompatActivity {
     private int c = 0;
     private int intA[][];
     private int intB[][];
+    private int intС[][];
     private boolean boolB[][];
     private int indexB = 0;
     private int intTest = 0;
@@ -33,8 +34,19 @@ public class Opt extends AppCompatActivity {
         boolV = new boolean[intT2];
         intA = new int[intT1][intT2];
         intB = new int[intT1][intT2];
+        intС = new int[intT1][intT2];
         booleanTest();
+        checkAB();
 
+        for (int i = 0; i < intT1; i++) {
+            for (int j = 0; j < intT2; j++) {
+                intС[j][i] = intA[j][i] - (V[j] + U[i]);
+            }
+        }
+
+    }
+
+    private void checkAB(){
         if (intT1 == intT2) {
             U[0] = 0;
             boolU[0] = true;
@@ -83,8 +95,6 @@ public class Opt extends AppCompatActivity {
             V[0] = 0;
             boolV[0] = true;
         }
-
-
     }
 
     private void booleanTest() {

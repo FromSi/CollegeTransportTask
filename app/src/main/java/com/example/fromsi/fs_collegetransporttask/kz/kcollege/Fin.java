@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.Space;
 import android.widget.TextView;
 
 import com.example.fromsi.fs_collegetransporttask.R;
@@ -17,20 +18,23 @@ import java.util.ArrayList;
 
 public class Fin extends AppCompatActivity implements View.OnClickListener {
     private Button optimal;
-    private TextView textformula, textost1, textost2;
+    private TextView textost1, textost2;
     private int summ1, summ2;
     private int[] editTexts1, editTexts2;
     private int[][] arrayOt, intB;
 
     private int index = 0;
 
-    private TextView t1, t2;
+    private TextView t1, t2, t3, t4;
     private ImageView imageView;
+    private ImageView imageView2;
+    private ImageView imageView3;
     private LinearLayout otvet2;
     private LinearLayout lnfinale1;
     private LinearLayout lnfinale2;
     private LinearLayout.LayoutParams sizefinale1;
     private ArrayList<LinearLayout> linearLayouts;
+    private Space space, space2, space3;
 
 
     @Override
@@ -38,7 +42,6 @@ public class Fin extends AppCompatActivity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fin);
         optimal = findViewById(R.id.optimal);
-        textformula = findViewById(R.id.textformula);
         textost1 = findViewById(R.id.textost1);
         textost2 = findViewById(R.id.textost2);
         otvet2 = findViewById(R.id.otvet2);
@@ -61,7 +64,6 @@ public class Fin extends AppCompatActivity implements View.OnClickListener {
             summ2 += editTexts2[i];
         }
         if (summ1 != summ2) checkF(summ1, summ2);
-        textformula.setText(getIntent().getStringExtra("formula"));
         start();
 
     }
@@ -127,41 +129,84 @@ public class Fin extends AppCompatActivity implements View.OnClickListener {
     }
 
     public void createotvet(int j, int k, int a) {
-        if (((index + 1) % 2) == 1) {
-            lnfinale1 = new LinearLayout(this);
-            linearLayouts = new ArrayList<>();
-            lnfinale1.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
-                    (int) getResources().getDimension(R.dimen.sizefinale2)));
-            otvet2.addView(lnfinale1);
-            for (int i = 0; i < 2; i++) {
-                lnfinale2 = new LinearLayout(this);
-                lnfinale2.setLayoutParams(new LinearLayout.LayoutParams((int) getResources().getDimension(R.dimen.sizefinale2),
-                        LinearLayout.LayoutParams.MATCH_PARENT, 1.0f));
-                lnfinale2.setGravity(Gravity.CENTER);
-                linearLayouts.add(lnfinale2);
-            }
-            lnfinale1.addView(linearLayouts.get((index + 1) % 2));
-            lnfinale1.addView(linearLayouts.get((index + 2) % 2));
-        }
+
+        lnfinale1 = new LinearLayout(this);
+        lnfinale1.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
+                (int) getResources().getDimension(R.dimen.sizefinale2)));
+        otvet2.addView(lnfinale1);
+
+        space = new Space(this);
+        space2 = new Space(this);
+        space3 = new Space(this);
+        space.setLayoutParams(new LinearLayout.LayoutParams((int) getResources().getDimension(R.dimen.sizefinale3),
+                LinearLayout.LayoutParams.WRAP_CONTENT, 0.5f));
+        space2.setLayoutParams(new LinearLayout.LayoutParams((int) getResources().getDimension(R.dimen.sizefinale3),
+                LinearLayout.LayoutParams.WRAP_CONTENT, 1.0f));
+        space3.setLayoutParams(new LinearLayout.LayoutParams((int) getResources().getDimension(R.dimen.sizefinale3),
+                LinearLayout.LayoutParams.WRAP_CONTENT, 0.5f));
+
         t1 = new TextView(this);
         t2 = new TextView(this);
+        t3 = new TextView(this);
+        t4 = new TextView(this);
         imageView = new ImageView(this);
+        imageView2 = new ImageView(this);
+        imageView3 = new ImageView(this);
         t1.setLayoutParams(new LinearLayout.LayoutParams((int) getResources().getDimension(R.dimen.sizefinale3),
                 LinearLayout.LayoutParams.WRAP_CONTENT, 1.0f));
         t2.setLayoutParams(new LinearLayout.LayoutParams((int) getResources().getDimension(R.dimen.sizefinale3),
                 LinearLayout.LayoutParams.WRAP_CONTENT, 1.0f));
+        t3.setLayoutParams(new LinearLayout.LayoutParams((int) getResources().getDimension(R.dimen.sizefinale3),
+                LinearLayout.LayoutParams.WRAP_CONTENT, 1.0f));
+        t4.setLayoutParams(new LinearLayout.LayoutParams((int) getResources().getDimension(R.dimen.sizefinale3),
+                LinearLayout.LayoutParams.WRAP_CONTENT, 1.0f));
         imageView.setLayoutParams(new LinearLayout.LayoutParams((int) getResources().getDimension(R.dimen.sizefinale3),
+                LinearLayout.LayoutParams.WRAP_CONTENT, 0.5f));
+        imageView2.setLayoutParams(new LinearLayout.LayoutParams((int) getResources().getDimension(R.dimen.sizefinale3),
+                LinearLayout.LayoutParams.WRAP_CONTENT, 0.5f));
+        imageView3.setLayoutParams(new LinearLayout.LayoutParams((int) getResources().getDimension(R.dimen.sizefinale3),
                 LinearLayout.LayoutParams.WRAP_CONTENT, 0.5f));
         t1.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
         t2.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+        t3.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+        t4.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
         imageView.setLayoutParams(sizefinale1);
+        imageView2.setLayoutParams(sizefinale1);
+        imageView3.setLayoutParams(sizefinale1);
         t1.setTextSize(getResources().getDimension(R.dimen.textsizefinale1));
         t2.setTextSize(getResources().getDimension(R.dimen.textsizefinale1));
+        t3.setTextSize(getResources().getDimension(R.dimen.textsizefinale1));
+        t4.setTextSize(getResources().getDimension(R.dimen.textsizefinale1));
         imageView.setImageDrawable(getResources().getDrawable(R.drawable.car));
-        t1.setText(String.valueOf("C" + (k + 1) + (j + 1)));
-        t2.setText(String.valueOf(a));
-        linearLayouts.get((index + 1) % 2).addView(imageView);
-        linearLayouts.get((index + 1) % 2).addView(t1);
-        linearLayouts.get((index + 1) % 2).addView(t2);
+        imageView2.setImageDrawable(getResources().getDrawable(R.drawable.storage));
+        imageView3.setImageDrawable(getResources().getDrawable(R.drawable.shop));
+
+//        t1.setText(String.valueOf("C" + (k + 1) + (j + 1)));
+        t1.setText(String.valueOf(k + 1));
+        t2.setText(String.valueOf('-'));
+        t3.setText(String.valueOf(j + 1));
+        t4.setText(String.valueOf(a));
+
+        lnfinale2 = new LinearLayout(this);
+        lnfinale2.setLayoutParams(new LinearLayout.LayoutParams((int) getResources().getDimension(R.dimen.sizefinale2),
+                LinearLayout.LayoutParams.MATCH_PARENT, 1.0f));
+        lnfinale2.setGravity(Gravity.CENTER);
+        lnfinale2.addView(imageView2);
+        lnfinale2.addView(t1);
+        lnfinale2.addView(t2);
+        lnfinale2.addView(t3);
+        lnfinale2.addView(imageView3);
+        lnfinale1.addView(space3);
+        lnfinale1.addView(lnfinale2);
+        lnfinale1.addView(space);
+
+        lnfinale2 = new LinearLayout(this);
+        lnfinale2.setLayoutParams(new LinearLayout.LayoutParams((int) getResources().getDimension(R.dimen.sizefinale2),
+                LinearLayout.LayoutParams.MATCH_PARENT, 1.0f));
+        lnfinale2.setGravity(Gravity.CENTER);
+        lnfinale2.addView(imageView);
+        lnfinale2.addView(t4);
+        lnfinale2.addView(space2);
+        lnfinale1.addView(lnfinale2);
     }
 }
