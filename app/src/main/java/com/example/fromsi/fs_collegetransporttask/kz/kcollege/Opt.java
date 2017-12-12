@@ -20,6 +20,10 @@ public class Opt extends AppCompatActivity {
     private int indexB = 0;
     private int intTest = 0;
     private int index = 1;
+    private boolean bool = false;
+    private int d = -1;
+    private int T1beta;
+    private int T2beta;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,13 +44,83 @@ public class Opt extends AppCompatActivity {
 
         for (int i = 0; i < intT1; i++) {
             for (int j = 0; j < intT2; j++) {
-                intС[j][i] = intA[j][i] - (V[j] + U[i]);
+                intС[i][j] = intA[i][j] - (V[i] + U[j]);
+                if (intA[i][j] - (V[i] + U[j]) <= d) {
+                    bool = true;
+                    d = intA[i][j] - (V[i] + U[j]);
+                    T1beta = i;
+                    T2beta = j;
+                }
             }
         }
+//        for (int i = 0; i < intT1; i++) {
+//            for (int j = 0; j < intT2; j++) {
+//                intС[j][i] = intA[j][i] - (V[j] + U[i]);
+//                if (intA[j][i] - (V[j] + U[i])<=d){
+//                    bool = true;
+//                    d = intA[j][i] - (V[j] + U[i]);
+//                    T1beta = i;
+//
+//                }
+//            }
+//        }
+        if (bool)
+            for (int i = 1; i < intT1; i++) {
+//            for (int j = 0; j < intT2; j++) {
+                if (T1beta - i >= 0) {
+                    if (boolB[T1beta - i][T2beta]) {
+                        for (int j = 1; j < intT2; j++) {
+                            if (T2beta - j > 0) {
+                                if (boolB[T1beta - i][T2beta - j]) {
+
+
+                                    int intMax = Math.min(intB[T1beta - i][T2beta], intB[T1beta][T2beta - j]);
+                                    intB[T1beta][T2beta] += intMax;
+                                    intB[T1beta - i][T2beta] -= intMax;
+                                    intB[T1beta - i][T2beta - j] += intMax;
+                                    intB[T1beta][T2beta - j] -= intMax;
+                                }
+                            } else if (intT2 > T2beta + j) {
+                                if (boolB[T1beta - i][T2beta + j]) {
+                                    int intMax = Math.min(intB[T1beta - i][T2beta], intB[T1beta][T2beta + j]);
+                                    intB[T1beta][T2beta] += intMax;
+                                    intB[T1beta - i][T2beta] -= intMax;
+                                    intB[T1beta - i][T2beta + j] += intMax;
+                                    intB[T1beta][T2beta + j] -= intMax;
+                                }
+                            }
+                        }
+                    }
+                }
+                if (intT1 > T1beta + i) {
+                    if (boolB[T1beta + i][T2beta]) {
+                        for (int j = 1; j < intT2; j++) {
+                            if (T2beta - j > 0) {
+                                if (boolB[T1beta + i][T2beta - j]) {
+                                    int intMax = Math.min(intB[T1beta + i][T2beta], intB[T1beta][T2beta - j]);
+                                    intB[T1beta][T2beta] += intMax;
+                                    intB[T1beta + i][T2beta] -= intMax;
+                                    intB[T1beta + i][T2beta - j] += intMax;
+                                    intB[T1beta][T2beta - j] -= intMax;
+                                }
+                            } else if (intT2 > T2beta + j) {
+                                if (boolB[T1beta + i][T2beta + j]) {
+                                    int intMax = Math.min(intB[T1beta + i][T2beta], intB[T1beta][T2beta + j]);
+                                    intB[T1beta][T2beta] += intMax;
+                                    intB[T1beta + i][T2beta] -= intMax;
+                                    intB[T1beta + i][T2beta + j] += intMax;
+                                    intB[T1beta][T2beta + j] -= intMax;
+                                }
+                            }
+                        }
+                    }
+                }
+//            }
+            }
 
     }
 
-    private void checkAB(){
+    private void checkAB() {
         if (intT1 == intT2) {
             U[0] = 0;
             boolU[0] = true;
@@ -119,7 +193,7 @@ public class Opt extends AppCompatActivity {
                 }
             }
         }
-        if (intT1 == intT2){
+        if (intT1 == intT2) {
             for (int i = 0; i < intT1; i++) {
                 int intBtest = getIntent().getIntExtra("intB", 2);
                 if (intBtest > indexB) {
@@ -132,7 +206,7 @@ public class Opt extends AppCompatActivity {
                     }
                 }
             }
-        } else if (intT1 < intT2){
+        } else if (intT1 < intT2) {
             for (int i = 0; i < intT2; i++) {
                 int intBtest = getIntent().getIntExtra("intB", 2);
                 if (intBtest > indexB) {
@@ -145,7 +219,7 @@ public class Opt extends AppCompatActivity {
                     }
                 }
             }
-        } else if (intT1 > intT2){
+        } else if (intT1 > intT2) {
             //1231312313132132131
             for (int i = 0; i < intT1; i++) {
                 int intBtest = getIntent().getIntExtra("intB", 2);
