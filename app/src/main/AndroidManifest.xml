@@ -8,8 +8,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".kz.kcollege.Begin">
+        android:theme="@style/AppTheme.NoActionBar">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -18,8 +18,10 @@
         </activity>
         <activity android:name=".kz.kcollege.Fill" />
         <activity android:name=".kz.kcollege.Fin" />
-        <activity android:name=".kz.kcollege.Opt">
-        </activity>
+        <activity android:name=".kz.kcollege.Opt" />
+        <activity android:name=".kz.kcollege.Begin" />
+        <activity android:name=".About" />
+        <activity android:name=".Help"></activity>
     </application>
 
 </manifest>

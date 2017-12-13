@@ -33,7 +33,6 @@ public class Fin extends AppCompatActivity implements View.OnClickListener {
     private LinearLayout lnfinale1;
     private LinearLayout lnfinale2;
     private LinearLayout.LayoutParams sizefinale1;
-    private ArrayList<LinearLayout> linearLayouts;
     private Space space, space2, space3;
 
 
