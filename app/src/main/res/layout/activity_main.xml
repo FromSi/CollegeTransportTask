@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.fromsi.fs_collegetransporttask.MainActivity">
+    tools:context="com.example.fromsi.fs_collegetransporttask.MainActivity"
+    android:background="#e0e0e0">
 
     <TextView
         android:id="@+id/textView"
@@ -54,7 +55,7 @@
             android:id="@+id/main1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button"
+            android:text="@string/main_1"
             android:textAllCaps="false"
             android:textSize="24sp"
             tools:layout_editor_absoluteX="136dp"
@@ -64,7 +65,7 @@
             android:id="@+id/main2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button"
+            android:text="@string/main_2"
             android:textAllCaps="false"
             android:textSize="24sp"
             tools:layout_editor_absoluteX="126dp"
@@ -74,7 +75,7 @@
             android:id="@+id/main3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button"
+            android:text="@string/main_3"
             android:textAllCaps="false"
             android:textSize="24sp"
             tools:layout_editor_absoluteX="96dp"
@@ -84,7 +85,7 @@
             android:id="@+id/main4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button"
+            android:text="@string/main_4"
             android:textAllCaps="false"
             android:textSize="24sp"
             tools:layout_editor_absoluteX="117dp"

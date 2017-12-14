@@ -21,7 +21,8 @@
         <activity android:name=".kz.kcollege.Opt" />
         <activity android:name=".kz.kcollege.Begin" />
         <activity android:name=".About" />
-        <activity android:name=".Help"></activity>
+        <activity android:name=".Help" />
+        <activity android:name=".Theory"></activity>
     </application>
 
 </manifest>

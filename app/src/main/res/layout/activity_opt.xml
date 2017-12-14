@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.fromsi.fs_collegetransporttask.kz.kcollege.Opt">
+    tools:context="com.example.fromsi.fs_collegetransporttask.kz.kcollege.Opt"
+    android:background="#e0e0e0">
 
     <ScrollView
         android:id="@+id/scrollView3"
@@ -17,7 +18,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/textView34">
 
         <LinearLayout
             android:id="@+id/otvet3"
@@ -29,4 +30,18 @@
 
         </LinearLayout>
     </ScrollView>
+
+    <TextView
+        android:id="@+id/textView34"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/opt_1"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>

@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    android:background="#e0e0e0">
     <LinearLayout
         android:id="@+id/llmain"
         android:layout_weight="1"
@@ -14,7 +15,7 @@
         android:orientation="horizontal"/>
         <Button
             android:id="@+id/start"
-            android:text="start"
+            android:text="@string/fill2_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 </LinearLayout>

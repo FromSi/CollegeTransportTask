@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.fromsi.fs_collegetransporttask.kz.kcollege.Begin">
+    tools:context="com.example.fromsi.fs_collegetransporttask.kz.kcollege.Begin"
+    android:background="#e0e0e0">
 
     <ImageView
         android:id="@+id/imageView3"
@@ -38,7 +39,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
-        android:text="Button              >>"
+        android:text="@string/fill1_1"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />

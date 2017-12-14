@@ -4,7 +4,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#e0e0e0">
 
     <Button
         android:id="@+id/optimal"
@@ -13,7 +14,7 @@
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:text="Button"
+        android:text="@string/fin_1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -27,7 +28,6 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/textformula"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -64,7 +64,7 @@
                 android:textSize="45sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imageView6" />
+                app:layout_constraintStart_toEndOf="@+id/imageView6"/>
 
             <Space
                 android:layout_width="0dp"
@@ -103,7 +103,7 @@
                 android:textSize="45sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imageView5" />
+                app:layout_constraintStart_toEndOf="@+id/imageView5"/>
 
             <Space
                 android:layout_width="0dp"

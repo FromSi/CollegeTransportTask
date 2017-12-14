@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:context="com.example.fromsi.fs_collegetransporttask.Theory"
+        tools:layout_editor_absoluteY="8dp"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/theory_1"
+                android:textAllCaps="false"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/imageView12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/s1" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/theory_2"
+                android:textAllCaps="false"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/theory_3"
+                android:textAllCaps="false"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/theory_4"
+                android:textAllCaps="false"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/theory_5"
+                android:textAllCaps="false"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/theory_6"
+                android:textAllCaps="false"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/theory_7"
+                android:textAllCaps="false"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/theory_8"
+                android:textAllCaps="false"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView56"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/theory_9"
+                android:textAllCaps="false"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/theory_10"
+                android:textAllCaps="false"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/theory_11"
+                android:textAllCaps="false"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView23"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/theory_12"
+                android:textAllCaps="false"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/theory_13"
+                android:textAllCaps="false"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView24"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/theory_14"
+                android:textAllCaps="false"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView25"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/theory_15"
+                android:textAllCaps="false"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView26"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/theory_16"
+                android:textAllCaps="false"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView27"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/theory_17"
+                android:textAllCaps="false"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView28"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/theory_18"
+                android:textAllCaps="false"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView57"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView29"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/theory_19"
+                android:textAllCaps="false"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView30"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/theory_20"
+                android:textAllCaps="false"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/imageView13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/s2" />
+
+            <TextView
+                android:id="@+id/textView58"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView31"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/theory_21"
+                android:textAllCaps="false"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView32"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/theory_22"
+                android:textAllCaps="false"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/imageView14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/s3" />
+
+            <TextView
+                android:id="@+id/textView59"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView33"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/theory_23"
+                android:textAllCaps="false"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/theory_47"
+                android:textAllCaps="false"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/theory_48"
+                android:textAllCaps="false"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/theory_24"
+                android:textAllCaps="false"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/imageView15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/s4" />
+
+            <TextView
+                android:id="@+id/textView35"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/theory_25"
+                android:textAllCaps="false"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView60"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView36"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/theory_26"
+                android:textAllCaps="false"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView37"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/theory_27"
+                android:textAllCaps="false"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/imageView16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/s5" />
+
+            <TextView
+                android:id="@+id/textView38"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/theory_28"
+                android:textAllCaps="false"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/imageView17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/s6" />
+
+            <TextView
+                android:id="@+id/textView39"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/theory_29"
+                android:textAllCaps="false"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/imageView18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/s7" />
+
+            <TextView
+                android:id="@+id/textView40"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/theory_30"
+                android:textAllCaps="false"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/imageView19"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/s8" />
+
+            <TextView
+                android:id="@+id/textView41"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/theory_31"
+                android:textAllCaps="false"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/imageView20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/s9" />
+
+            <TextView
+                android:id="@+id/textView64"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/theory_46"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView42"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/theory_32"
+                android:textAllCaps="false"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/imageView21"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/s10" />
+
+            <TextView
+                android:id="@+id/textView43"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/theory_33"
+                android:textAllCaps="false"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView61"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView44"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/theory_34"
+                android:textAllCaps="false"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView45"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/theory_35"
+                android:textAllCaps="false"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/imageView22"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/s11" />
+
+            <TextView
+                android:id="@+id/textView46"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/theory_36"
+                android:textAllCaps="false"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/imageView23"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/s12" />
+
+            <TextView
+                android:id="@+id/textView47"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/theory_37"
+                android:textAllCaps="false"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/imageView24"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/s13" />
+
+            <TextView
+                android:id="@+id/textView48"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/theory_38"
+                android:textAllCaps="false"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/imageView25"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/s14" />
+
+            <TextView
+                android:id="@+id/textView49"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/theory_39"
+                android:textAllCaps="false"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/imageView26"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/s15" />
+
+            <TextView
+                android:id="@+id/textView50"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/theory_40"
+                android:textAllCaps="false"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView62"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView51"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/theory_41"
+                android:textAllCaps="false"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView52"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/theory_42"
+                android:textAllCaps="false"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView63"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView53"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/theory_43"
+                android:textAllCaps="false"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView54"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/theory_44"
+                android:textAllCaps="false"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/imageView27"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/s16" />
+
+            <TextView
+                android:id="@+id/textView55"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/theory_45"
+                android:textAllCaps="false"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

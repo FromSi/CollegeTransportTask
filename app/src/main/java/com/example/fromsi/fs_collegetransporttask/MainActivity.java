@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(new Intent(this, Begin.class));
                 break;
             case R.id.main2:
-
+                startActivity(new Intent(this, Theory.class));
                 break;
             case R.id.main3:
                 startActivity(new Intent(this, Help.class));
