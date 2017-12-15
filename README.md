@@ -1,0 +1,5 @@
+# FS_CollegeTransportTask
+<p align="center"><img src="https://github.com/FromSi/FS_CollegeTransportTask/blob/master/Screenshot/sc1.png" width="300"><img src="https://github.com/FromSi/FS_CollegeTransportTask/blob/master/Screenshot/sc2.png" alt="Turi Create" width="300"></p>
+<p align="center"><img src="https://github.com/FromSi/FS_CollegeTransportTask/blob/master/Screenshot/sc3.png" width="300"><img src="https://github.com/FromSi/FS_CollegeTransportTask/blob/master/Screenshot/sc4.png" alt="Turi Create" width="300"></p>
+<p align="center"><img src="https://github.com/FromSi/FS_CollegeTransportTask/blob/master/Screenshot/sc5.png" width="300"><img src="https://github.com/FromSi/FS_CollegeTransportTask/blob/master/Screenshot/sc6.png" alt="Turi Create" width="300"></p>
+<p align="center"><img src="https://github.com/FromSi/FS_CollegeTransportTask/blob/master/Screenshot/sc7.png" width="300"><img src="https://github.com/FromSi/FS_CollegeTransportTask/blob/master/Screenshot/sc8.png" alt="Turi Create" width="300"></p>
