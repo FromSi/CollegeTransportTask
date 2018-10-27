@@ -11,8 +11,6 @@ import android.widget.TextView;
 
 import com.example.fromsi.fs_collegetransporttask.R;
 
-import java.util.ArrayList;
-
 public class Opt extends AppCompatActivity {
     private int intT1;
     private int intT2;

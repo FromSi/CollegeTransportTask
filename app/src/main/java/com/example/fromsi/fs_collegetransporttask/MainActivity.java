@@ -4,46 +4,44 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 
 import com.example.fromsi.fs_collegetransporttask.kz.kcollege.Begin;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    private Button b1, b2, b3, b4;
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
-
-        b1 = findViewById(R.id.main1);
-        b2 = findViewById(R.id.main2);
-        b3 = findViewById(R.id.main3);
-        b4 = findViewById(R.id.main4);
-
-        b1.setOnClickListener(this);
-        b2.setOnClickListener(this);
-        b3.setOnClickListener(this);
-        b4.setOnClickListener(this);
+        onClickButton();
     }
 
-    @Override
-    public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.main1:
-                startActivity(new Intent(this, Begin.class));
-                break;
-            case R.id.main2:
-                startActivity(new Intent(this, Theory.class));
-                break;
-            case R.id.main3:
-                startActivity(new Intent(this, Help.class));
-                break;
-            case R.id.main4:
-                startActivity(new Intent(this, About.class));
-                break;
-            default:
-                break;
-        }
+    private void onClickButton(){
+
+        findViewById(R.id.main1).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), Begin.class));
+            }
+        });
+        findViewById(R.id.main2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), Theory.class));
+            }
+        });
+        findViewById(R.id.main3).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), Help.class));
+            }
+        });
+        findViewById(R.id.main4).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), About.class));
+            }
+        });
     }
 }
